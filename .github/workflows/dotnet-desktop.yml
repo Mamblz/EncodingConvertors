@@ -53,7 +53,7 @@ jobs:
     runs-on: windows-latest  
 
     env:
-      Solution_Name: CoodingLabrary.sln  
+      Solution_Name: CoodingLabrary.csproj  
       Test_Project_Path: CoodingLibrary/CoodingLibrary.csproj  
 
     steps:
@@ -68,4 +68,4 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Execute unit tests
-      run:  dotnet test CoodingLabrary.sln --configuration Debug --no-restore
+      run:  dotnet test CoodingLabrary.csproj --configuration Debug --no-restore

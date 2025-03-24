@@ -15,7 +15,7 @@ namespace CoodingLibrary
         {
             if (input == null)
             {
-                throw new ArgumentNullException(nameof(input)); //Проверка, что строка не пустая
+                throw new ArgumentNullException(nameof(input)); //Проверка, что строка не пустaя
             }
             byte[] bytes = Encoding.Default.GetBytes(input); //получение байтов из строки
             return Encoding.UTF8.GetString(bytes); //Преобразование байтов в строку с нужной кодировкой

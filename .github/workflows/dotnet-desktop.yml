@@ -53,8 +53,8 @@ jobs:
     runs-on: windows-latest  
 
     env:
-      Solution_Name: CoodingTest.sln  
-      Test_Project_Path: CoodingLibrary/CoodingTest.csproj  
+      Solution_Name: UnitTest1.csproj  
+      Test_Project_Path: CoodingLibrary/UnitTest1.csproj  
 
     steps:
     - name: Checkout repository
@@ -68,4 +68,4 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Execute unit tests
-      run:  dotnet test CoodingTest.sln --configuration Debug --no-restore
+      run:  dotnet test UnitTest1.csproj --configuration Debug --no-restore

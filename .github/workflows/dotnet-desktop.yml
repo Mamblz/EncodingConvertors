@@ -45,7 +45,6 @@ on:
 
 jobs:
   build:
-
     strategy:
       matrix:
         configuration: [Debug]
@@ -54,7 +53,7 @@ jobs:
 
     env:
       Solution_Name: CoodingLibrary.sln 
-      Test_Project_Path: CoodingTest/UnitTest1.csproj 
+      Test_Project_Path: CoodingTest/CoodingTest.csproj 
 
     steps:
     - name: Checkout repository
@@ -67,5 +66,11 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
+    - name: Restore dependencies
+      run: dotnet restore ${{ env.Solution_Name }}
+
+    - name: Build solution
+      run: dotnet build ${{ env.Solution_Name }} --no-restore --configuration Debug
+
     - name: Execute unit tests
-      run:  dotnet test CoodingLibrary.sln --no-restore
+      run: dotnet test ${{ env.Solution_Name }} --no-restore --configuration Debug

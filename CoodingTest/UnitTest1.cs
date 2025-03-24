@@ -15,7 +15,7 @@ namespace CoodingTest
         [Fact]
         public void ConvertToUtf8Input() //Проверка метода для преобразования в Utf-8
         {
-            string input = "Hello, World!"; //присвоение значения
+            string input = "Hello, World!"; //присвоение значeния
             var result = _converter.ConvertorToUtf8(input); //Вызов метода
             Assert.Equal("Hello, World!", result); //Сопоставление результатов
         }

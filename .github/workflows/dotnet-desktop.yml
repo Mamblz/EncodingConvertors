@@ -68,4 +68,4 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Execute unit tests
-      run:  dotnet test UnitTest1.csproj --configuration Debug --no-restore
+      run:  dotnet test UnitTest1.csproj

@@ -28,7 +28,7 @@ namespace CoodingTest
         }
 
         [Fact]
-        public void ConvertFromAsciiInput() //Проверка метода для преобразования в Ascii
+        public void ConvertFromAsciiInput() //Проверка метода для преобразования в Аscii
         {
             string input = "Hello, World!"; //присвоение значения
             var result = _converter.ConvertToAscii(input); //Вызов метода
